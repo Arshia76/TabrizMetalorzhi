@@ -18,21 +18,20 @@ const ProductsHero = (props) => {
  absolute top-1/2 left-1/2 w-3/4 px-24  translate-x-[-35%] translate-y-[-30%]'
       >
         <h2 className='text-7xl text-gray-800 text-center mb-10 leading-normal'>
-          {props.category || 'نام دسته'}
+          محصولات ما
         </h2>
-        <p className='text-4xl leading-loose text-gray-700 text-justify'>
-          {props.description ||
-            `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. `}
-        </p>
+        <h4 className='text-5xl text-gray-800 text-center mb-10 leading-normal'>
+          در زیر دسته‌بندی محصولات را مشاهده می‌کنید
+        </h4>
       </div>
-      <div className='absolute bottom-0 left-0 translate-y-24'>
+      <div className='absolute left-0 bottom-0'>
         <Image
           src={
-            'https://debearings.com/wp-content/uploads/2016/07/ledlager-underhallsfritt.png'
+            'https://debearings.com/wp-content/uploads/2016/03/glidlager_toppbild-2.png'
           }
-          alt='img'
-          width={300}
-          height={300}
+          alt='Img'
+          width={350}
+          height={350}
         />
       </div>
     </div>
