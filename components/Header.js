@@ -3,40 +3,31 @@ import Resource from '../public/Resource';
 import Image from 'next/image';
 import { ControlledMenu, MenuItem, useMenuState } from '@szhsin/react-menu';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+  const router = useRouter();
   const productRef = useRef(null);
-  const catalogueRef = useRef(null);
-  const aboutRef = useRef(null);
-  const contactRef = useRef(null);
 
-  //   const [isOpenProduct, setOpenProduct] = useState();
-  //   const [isOpenCatalogue, setOpenCatalogue] = useState();
-  //   const [isOpenAbout, setOpenAbout] = useState();
-  //   const [isOpenContact, setOpenContact] = useState();
+  const aboutRef = useRef(null);
 
   const [menuPropsProduct, toggleMenuProduct] = useMenuState({
     transition: true,
   });
-  const [menuPropsCatalogue, toggleMenuCatalogue] = useMenuState({
-    transition: true,
-  });
+
   const [menuPropsAbout, toggleMenuAbout] = useMenuState({ transition: true });
-  const [menuPropsContact, toggleMenuContact] = useMenuState({
-    transition: true,
-  });
 
   return (
     <nav className='fixed top-0 left-0 px-10 w-full z-[1000]'>
       <div className='flex items-center bg-[#E6E6E6] p-4 pr-20 shadow-lg'>
         {/* <Image /> */}
-        <span className='text-2xl ml-10'>زبان</span>
+        {/* <span className='text-2xl ml-10'>زبان</span> */}
 
         {/* <Image /> */}
-        <span className='text-2xl ml-10'>arshia@yahoo.com</span>
+        <span className='text-2xl ml-10'>tabrizpm@yahoo.com</span>
 
         {/* <Image /> */}
-        <span className='text-2xl ml-10'>041-36684575</span>
+        <span className='text-2xl ml-10'>04136306035-6</span>
 
         {/* <Image /> */}
         {/* <Image /> */}
@@ -44,22 +35,22 @@ const Header = () => {
       </div>
 
       <div
-        className='relative py-2 bg-white flex items-center justify-around 
-      rounded-b-md shadow-lg '
+        className='relative  bg-white flex items-center justify-around 
+      rounded-b-md shadow-lg  '
       >
         <Link passHref href={Resource.Routes.HOME}>
           <Image
             alt='main-logo'
             src={Resource.Images.LOGO}
             width={80}
-            height={80}
+            height={100}
             objectFit='contain'
             className='cursor-pointer'
           />
         </Link>
         <div>
           <Link passHref href={Resource.Routes.PRODUCTS}>
-            <div className='cursor-pointer'>
+            <div className='cursor-pointer group'>
               <div
                 className='text-3xl duration-300 transition-all
                hover:text-[#EFAF43]'
@@ -68,7 +59,7 @@ const Header = () => {
               >
                 محصولات
               </div>
-              <hr className='h-2 w-32 absolute bottom-0 bg-[#EFAF43]' />
+              <hr className='h-2 w-32 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
             </div>
           </Link>
 
@@ -83,83 +74,60 @@ const Header = () => {
             }}
           >
             <div
-              className='p-20 flex items-center justify-between
+              className='p-20 flex items-start justify-between
                 bg-[#E7E7E7] w-[70vw]'
             >
               <div>
-                <MenuItem className='text-3xl mb-4 font-[500]'>دسته‌1</MenuItem>
+                <MenuItem className='text-3xl mb-4 font-[500]'>بوش</MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/بوش/BG`)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌1
+                  BG
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/بوش/BL`)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌2
+                  BL
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/بوش/BM`)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌3
+                  BM
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/بوش/BS`)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌4
+                  BS
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/بوش/BT`)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌5
+                  BT
                 </MenuItem>
                 <MenuItem
-                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                >
-                  مشاهده‌همه
-                </MenuItem>
-              </div>
-              <div>
-                <MenuItem className='text-2xl mb-4 font-semibold'>
-                  دسته‌2
-                </MenuItem>
-                <MenuItem
-                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                >
-                  محصول‌1
-                </MenuItem>
-                <MenuItem
-                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                >
-                  محصول‌2
-                </MenuItem>
-                <MenuItem
-                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                >
-                  محصول‌3
-                </MenuItem>
-                <MenuItem
-                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                >
-                  محصول‌4
-                </MenuItem>
-                <MenuItem
-                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                >
-                  محصول‌5
-                </MenuItem>
-                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/بوش `)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
@@ -167,40 +135,213 @@ const Header = () => {
                 </MenuItem>
               </div>
               <div>
-                <MenuItem className='text-2xl mb-4 font-semibold'>
-                  دسته‌3
+                <MenuItem className='text-3xl mb-4 font-[500]'>
+                  یاتاقان
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(
+                      `${Resource.Routes.CATEGORY}/یاتاقان/یاتاقان پمپ باد`
+                    )
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌1
+                  یاتاقان پمپ باد
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(
+                      `${Resource.Routes.CATEGORY}/یاتاقان/یاتاقان سواری`
+                    )
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌2
+                  یاتاقان سواری
                 </MenuItem>
+
                 <MenuItem
+                  onClick={() =>
+                    router.push(
+                      `${Resource.Routes.CATEGORY}/یاتاقان/یاتاقان سنگین`
+                    )
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌3
+                  یاتاقان سنگین
                 </MenuItem>
+
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/یاتاقان `)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌4
+                  مشاهده‌همه
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem className='text-3xl mb-4 font-[500]'>
+                  صفحات اصطکاکی
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WG`)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
-                  محصول‌5
+                  WG
                 </MenuItem>
                 <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WL`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  WL
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WM`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  WM
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WS`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  WS
+                </MenuItem>
+
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  مشاهده‌همه
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem className='text-3xl mb-4 font-[500]'>
+                  پودر فلزات
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(
+                      `${Resource.Routes.CATEGORY}/پودر فلزات/آلومینیوم`
+                    )
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  آلومینیوم
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/پودر فلزات/برنز`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  برنز
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/پودر فلزات/مس`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  مس
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/پودر فلزات/برنج`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  برنج
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(
+                      `${Resource.Routes.CATEGORY}/پودر فلزات/آهن آلیاژی و غیر آلیاژی`
+                    )
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  آهن آلیاژی و غیر آلیاژی
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/پودر فلزات`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  مشاهده‌همه
+                </MenuItem>
+              </div>
+              <div>
+                <MenuItem className='text-3xl mb-4 font-[500]'>
+                  قطعات خودرو
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  لوله پمپ باد EF7
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  قلاب مهار باد
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  سبت باتری IR
+                </MenuItem>
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
+                  }
+                  className='text-2xl mb-4 border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                >
+                  سبت باتری V10
+                </MenuItem>
+
+                <MenuItem
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی`)
+                  }
                   className='text-2xl mb-4 border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
                 >
@@ -214,17 +355,17 @@ const Header = () => {
         {/*  */}
 
         <Link passHref href={Resource.Routes.CATALOGUE}>
-          <div>
+          <div className='group'>
             <div className='text-3xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
-              گاتالوگ‌ها
+              کاتالوگ‌ها
             </div>
-            <hr className='h-2 w-28 absolute bottom-0 bg-[#EFAF43]' />
+            <hr className='h-2 w-28 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
           </div>
         </Link>
 
         <div>
           <Link passHref href={Resource.Routes.ABOUT}>
-            <div className='cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
+            <div className='cursor-pointer group duration-300 transition-al hover:text-[#EFAF43]'>
               <div
                 className='text-3xl'
                 ref={aboutRef}
@@ -232,7 +373,7 @@ const Header = () => {
               >
                 درباره‌ما
               </div>
-              <hr className='h-2 w-24 absolute bottom-0 bg-[#EFAF43]' />
+              <hr className='h-2 w-24 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
             </div>
           </Link>
 
@@ -258,14 +399,14 @@ const Header = () => {
         {/*  */}
 
         <Link passHref href={Resource.Routes.CONTACT}>
-          <div>
+          <div className='group'>
             <div
               className='text-3xl cursor-pointer duration-300 transition-all
          hover:text-[#EFAF43] '
             >
               تماس‌با‌ما
             </div>
-            <hr className='h-2 w-28 absolute bottom-0 bg-[#EFAF43]' />
+            <hr className='h-2 w-28 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
           </div>
         </Link>
 

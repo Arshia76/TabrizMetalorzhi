@@ -9,7 +9,7 @@ const CatalogueCard = () => {
     >
       <div className='px-12 py-10 flex flex-col  items-center justify-center'>
         <Image
-          src={Resource.Images.ENVIRONMENT1}
+          src={Resource.Images.BG}
           alt='product'
           width={250}
           height={150}

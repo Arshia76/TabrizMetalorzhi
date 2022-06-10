@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Resource from '../public/Resource';
+import { HiOutlineMail } from 'react-icons/hi';
+import { FiPhone } from 'react-icons/fi';
 
 const ContactUs = () => {
   return (
@@ -18,19 +20,14 @@ const ContactUs = () => {
             className=' relative flex items-center justify-center w-[80px] h-[80px]
           rounded-full p-6 ml-6'
           >
-            <Image
-              layout='fill'
-              objectFit='contain'
-              src={Resource.Svg.SEARCH2}
-              alt='email'
-            />
+            <HiOutlineMail size={55} />
           </div>
           <div className='flex flex-col'>
             <span className='text-[#999999] text-xl md:text-4xl mb-6'>
               ایمیل
             </span>
             <span className='text-gray-800 text-2xl md:text-5xl'>
-              arshia@yahoo.com
+              tabrizpm@yahoo.com
             </span>
           </div>
         </div>
@@ -39,12 +36,7 @@ const ContactUs = () => {
             className='relative flex items-center justify-center w-[80px] h-[80px]
           rounded-full p-6 ml-6'
           >
-            <Image
-              layout='fill'
-              objectFit='contain'
-              src={Resource.Svg.SEARCH2}
-              alt='phone'
-            />
+            <FiPhone size={55} />
           </div>
 
           <div className='flex flex-col'>
@@ -52,7 +44,7 @@ const ContactUs = () => {
               شماره تماس
             </span>
             <span className='text-gray-800 text-2xl md:text-5xl'>
-              041-36654875
+              04136306035-6
             </span>
           </div>
         </div>
