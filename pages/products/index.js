@@ -13,7 +13,7 @@ const ProductsPage = () => {
         {allProducts.map((product) => (
           <ProductCard
             key={product.id}
-            name={product.subCategory}
+            name={product.subCategory.name}
             img={product.img}
           />
         ))}
