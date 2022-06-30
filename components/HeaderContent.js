@@ -1,40 +1,31 @@
-import Image from 'next/image';
-import Resource from '../public/Resource';
 import { BiSearch } from 'react-icons/bi';
 
 const HeaderContent = () => {
   return (
     <div className='overflow-hidden relative'>
-      <div className='relative w-screen'>
+      <div className='relative w-screen h-[90vh] '>
         <video
           muted
           autoPlay
           loop
-          className='h-full w-full brightness-50 bg-cover'
+          controlsList='nodownload'
+          className='h-full w-screen brightness-50 object-cover'
         >
           <source
-            src='https://s3-eu-west-1.amazonaws.com/debearings/de-video.mp4'
+            src={'/Resource/Videos/hero-video.mp4.crdownload'}
             type='video/mp4'
-          />
-          <source
-            src='https://s3-eu-west-1.amazonaws.com/debearings/de-video.webm'
-            type='video/webM'
           />
         </video>
       </div>
       <div
-        className='flex flex-col justify-center items-center px-44 max-w-screen-xl
-       absolute top-1/2 left-1/2 w-full translate-x-[-50%] translate-y-[-30%]'
+        className='flex flex-col justify-center items-center px-8 md:px-44 max-w-screen-xl
+       absolute top-1/2 left-1/2 w-full translate-x-[-50%] translate-y-[-50%]'
       >
-        <h2 className='text-2xl md:text-6xl text-white text-center mb-20 leading-normal'>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم ایپسوم
-          متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+        <h2 className='text-5xl md:text-6xl text-white text-center my-20 leading-normal'>
+          کارخانه متالورژی پودر تبریز
         </h2>
-        <p className='text-xl md:text-4xl text-white text-center leading-normal mb-24'>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپلورم ایپسوم
-          متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
-        </p>
-        <div className='p-6 w-full flex items-center rounded-lg  bg-white'>
+
+        <div className='p-6 py-2 w-full flex items-center rounded-lg  bg-white'>
           <BiSearch size={55} color='grey' />
           <input
             type='text'

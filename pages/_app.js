@@ -7,6 +7,7 @@ import '@szhsin/react-menu/dist/index.css';
 import '../styles/Carousel.css';
 import 'leaflet/dist/leaflet.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
+import '../styles/Header.css';
 import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }) {

@@ -6,7 +6,7 @@ const ProductCard = (props) => {
     <div
       onClick={props.onClick}
       className='shadow-2xl rounded-2xl bg-white cursor-pointer 
-      overflow-hidden mx-10 mb-10 group '
+      overflow-hidden mx-10 mb-10 group'
     >
       <div
         className='px-12 py-10 translate-y-20 group-hover:translate-y-0 

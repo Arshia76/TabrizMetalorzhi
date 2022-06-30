@@ -5,14 +5,15 @@ const CatalogueCard = () => {
   return (
     <div
       className='shadow-2xl rounded-2xl bg-white cursor-pointer
-    overflow-hidden  mx-10'
+    overflow-hidden w-1/3 mx-10'
     >
-      <div className='px-12 py-10 flex flex-col  items-center justify-center'>
+      <div className='px-12 py-10 flex flex-col items-center justify-center'>
         <Image
           src={Resource.Images.BG}
           alt='product'
-          width={250}
+          width={200}
           height={150}
+          objectFit='cover'
         />
         <span className='text-3xl text-black ml-auto mt-10'>نام کالا</span>
       </div>

@@ -6,7 +6,7 @@ const CataloguePage = () => {
     <div>
       <Catalogue />
       <div
-        className='flex items-center justify-start px-32 
+        className='flex items-center flex-wrap justify-start px-4 md:px-32 
       mb-64'
       >
         <CatalogueCard />

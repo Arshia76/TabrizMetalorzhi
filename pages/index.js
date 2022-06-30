@@ -10,9 +10,9 @@ export default function Home() {
     <main className='overflow-hidden'>
       <HeaderContent />
       <div
-        className='flex items-center justify-evenly 
-         px-32 md:translate-y-[-40px] flex-wrap md:flex-nowrap  
-      mb-10 '
+        className='flex items-center justify-evenly flex-wrap mb-10  
+         md:px-32 md:translate-y-[-40px]   
+       '
       >
         <ProductCard
           name='بوش'

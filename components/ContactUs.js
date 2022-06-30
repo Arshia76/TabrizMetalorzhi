@@ -1,19 +1,17 @@
-import Image from 'next/image';
-import Resource from '../public/Resource';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiPhone } from 'react-icons/fi';
 
 const ContactUs = () => {
   return (
     <div>
-      <div className='w-full flex items-center justify-center'>
+      <div className='w-full flex items-center justify-center hidden xl:block'>
         <span className='text-[#D2D2D2]  text-8xl'>
           .....................................................................
         </span>
       </div>
       <div
         className='flex flex-col md:flex-row flex-wrap md:flex-nowrap md:justify-around 
-      items-center mt-10'
+      items-start mt-10'
       >
         <div className='flex items-center mb-12 md:mb-0'>
           <div
@@ -49,7 +47,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className='w-full flex items-center justify-center'>
+      <div className='w-full flex items-center justify-center hidden xl:block'>
         <span className='text-[#D2D2D2]  text-8xl'>
           .....................................................................
         </span>

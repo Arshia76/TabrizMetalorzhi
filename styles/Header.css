@@ -1,0 +1,28 @@
+.navbar-appear {
+  transform: translateX(400px) !important;
+}
+.navbar-appear-active {
+  transform: translateX(0) !important;
+  transition: all 1000ms ease;
+}
+
+.navbar-enter {
+  transform: translateX(400px) !important;
+}
+.navbar-enter-active {
+  transform: translateX(0) !important;
+  transition: all 1000ms ease;
+}
+
+.navbar-enter-done {
+  transform: translateX(0) !important;
+}
+
+.navbar-exit {
+  transform: translateX(0) !important;
+}
+
+.navbar-exit-active {
+  transform: translateX(400px) !important;
+  transition: all 1000ms ease;
+}
