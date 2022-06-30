@@ -5,7 +5,7 @@ import {
   createProduct,
 } from '../../../backend/controllers/products';
 // import withProtect from '../../../backend/lib/middleware/withProtect';
-import { productUploadHandler } from '../../../backend/lib/multer';
+import { productUploadHandler } from '../../../backend/lib/middleware/multer';
 
 const handler = nc({
   onError: (err, req, res, next) => {

@@ -5,7 +5,7 @@ import {
   getCategories,
 } from '../../../backend/controllers/products';
 // import withProtect from '../../../backend/lib/middleware/withProtect';
-import { categoryUploadHandler } from '../../../../backend/lib/multer';
+import { categoryUploadHandler } from '../../../backend/lib/middleware/multer';
 
 const handler = nc({
   onError: (err, req, res, next) => {
