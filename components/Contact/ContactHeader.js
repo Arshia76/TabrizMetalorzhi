@@ -14,13 +14,13 @@ const ContactHeader = () => {
         />
       </div>
       <div
-        className='flex flex-col justify-center items-center px-44
+        className='flex flex-col justify-center items-center px-4 md:px-44
    absolute top-1/2 left-1/2 w-full translate-x-[-50%] translate-y-[-30%]'
       >
         <h2 className='text-7xl text-gray-800 text-center mb-20 leading-normal'>
           تماس با ما
         </h2>
-        <p className='text-5xl leading-normal text-gray-700'>
+        <p className='text-3xl text-center md:text-5xl md:leading-normal text-gray-700'>
           اگر در مورد وسایل و تجهیزات مورد نیاز خود شک دارید یا مطمئن نیستید
           می‌توانید با ما در تماس باشید تا بهترین راهنمایی را برای شما ارائه
           دهیم

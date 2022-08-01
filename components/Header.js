@@ -34,8 +34,8 @@ const Sidebar = ({ setShow, show }) => {
               className='cursor-pointer'
             />
           </Link>
-          <div className='flex flex-col items-start mb-10'>
-            <h4 className='text-3xl font-[500] mb-6 p-4'>بوش</h4>
+          <div className='flex flex-col items-start mt-20'>
+            <h4 className='text-4xl text-gray-900 font-[500] mb-2 p-4 '>بوش</h4>
             <div className='flex flex-col items-start'>
               <span
                 className='text-3xl p-4 cursor-pointer'
@@ -96,8 +96,10 @@ const Sidebar = ({ setShow, show }) => {
 
           {/* second */}
 
-          <div className='flex flex-col items-start mb-10'>
-            <h4 className='text-3xl font-[500] p-4 mb-6'>یاتاقان</h4>
+          <div className='flex flex-col items-start mt-20'>
+            <h4 className='text-4xl text-gray-900 font-[500] p-4 mb-2'>
+              یاتاقان
+            </h4>
             <div className='flex flex-col items-start'>
               <span
                 className='text-3xl p-4 cursor-pointer '
@@ -145,8 +147,10 @@ const Sidebar = ({ setShow, show }) => {
           </div>
           {/* third */}
 
-          <div className='flex flex-col items-start mb-10'>
-            <h4 className='text-3xl p-4 font-[500] mb-6'>صفحات اصطکاکی</h4>
+          <div className='flex flex-col items-start mt-20'>
+            <h4 className='text-4xl text-gray-900 p-4 font-[500] mb-6'>
+              صفحات اصطکاکی
+            </h4>
             <div className='flex flex-col items-start'>
               <span
                 className='text-3xl p-4 cursor-pointer'
@@ -197,8 +201,10 @@ const Sidebar = ({ setShow, show }) => {
           </div>
           {/* Forth */}
 
-          <div className='flex flex-col items-start mb-10'>
-            <h4 className='text-3xl p-4  font-[500] mb-6'>پودر فلزات</h4>
+          <div className='flex flex-col items-start mt-20'>
+            <h4 className='text-4xl text-gray-900 p-4  font-[500] mb-2'>
+              پودر فلزات
+            </h4>
             <div className='flex flex-col items-start'>
               <span
                 className='text-3xl p-4 cursor-pointer'
@@ -261,8 +267,10 @@ const Sidebar = ({ setShow, show }) => {
             </div>
           </div>
           {/* Fifth */}
-          <div className='flex flex-col items-start'>
-            <h4 className='text-3xl p-4 font-[500] mb-6'>قطعات خودرو</h4>
+          <div className='flex flex-col items-start mt-20'>
+            <h4 className='text-4xl text-gray-900 p-4 font-[500] mb-2'>
+              قطعات خودرو
+            </h4>
             <div className='flex flex-col items-start'>
               <span
                 className='text-3xl p-4 cursor-pointer'
@@ -311,6 +319,87 @@ const Sidebar = ({ setShow, show }) => {
               </span>
             </div>
           </div>
+          {/* About */}
+          <div className='flex flex-col items-start mt-20 '>
+            <h4 className='text-4xl text-gray-900 p-4 font-[500] mb-2'>
+              درباره ما
+            </h4>
+            <div className='flex flex-col items-start'>
+              <span
+                className='text-3xl p-4 cursor-pointer'
+                onClick={() => {
+                  router.push(`${Resource.Routes.ABOUT}/about`);
+                  setShow(false);
+                }}
+              >
+                تاریخچه متالورژی
+              </span>
+              <span
+                className='text-3xl p-4 cursor-pointer'
+                onClick={() => {
+                  router.push(`${Resource.Routes.ABOUT}/about`);
+                  setShow(false);
+                }}
+              >
+                تاریخچه شرکت
+              </span>
+              <span
+                className='text-3xl p-4 cursor-pointer'
+                onClick={() => {
+                  router.push(`${Resource.Routes.ABOUT}/teach`);
+                  setShow(false);
+                }}
+              >
+                آموزش
+              </span>
+              <span
+                className='text-3xl p-4 cursor-pointer'
+                onClick={() => {
+                  router.push(`${Resource.Routes.ABOUT}/research`);
+                  setShow(false);
+                }}
+              >
+                بخش تحقیق و توسعه
+              </span>
+              <span
+                className='text-3xl p-4 cursor-pointer'
+                onClick={() => {
+                  router.push(`${Resource.Routes.ABOUT}/qualityControl`);
+                  setShow(false);
+                }}
+              >
+                کنترل کیفیت و آزمایشگاه
+              </span>
+              <span
+                className='text-3xl p-4 cursor-pointer'
+                onClick={() => {
+                  router.push(`${Resource.Routes.ABOUT}/goals`);
+                  setShow(false);
+                }}
+              >
+                اهداف کیفیت
+              </span>
+              <span
+                className='text-3xl p-4 cursor-pointer'
+                onClick={() => {
+                  router.push(`${Resource.Routes.ABOUT}/policy`);
+                  setShow(false);
+                }}
+              >
+                خط مشی کیفیت
+              </span>
+            </div>
+          </div>
+          {/* Call us */}
+          <h4
+            className='cursor-pointer text-4xl text-gray-900 p-4 font-[500] mt-20'
+            onClick={() => {
+              router.push(`${Resource.Routes.CONTACT}`);
+              setShow(false);
+            }}
+          >
+            تماس‌با‌ما
+          </h4>
         </div>
       </CSSTransition>
       <div
@@ -323,6 +412,11 @@ const Sidebar = ({ setShow, show }) => {
 
 const ResponsiveHeader = ({ setShow, show }) => {
   const context = useContext(EnqueryContext);
+  const submitRef = useRef(null);
+
+  const [menuPropsSubmit, toggleMenuSubmit] = useMenuState({
+    transition: true,
+  });
 
   return (
     <nav className='fixed top-0 left-0  w-full z-[500]'>
@@ -342,13 +436,55 @@ const ResponsiveHeader = ({ setShow, show }) => {
           onClick={() => setShow((state) => !state)}
         />
 
-        <button
-          onClick={context.move}
-          className='p-4 text-white bg-[#EFAF43] rounded-md mr-12
+        <div>
+          <button
+            ref={submitRef}
+            onClick={() => {
+              // context.move();
+              toggleMenuSubmit(true);
+            }}
+            className='p-4 text-white bg-[#EFAF43] rounded-md mr-64 
         transition-all duration-300 hover:bg-[#333333] text-2xl'
-        >
-          ثبت درخواست
-        </button>
+          >
+            همکاری
+          </button>
+          <ControlledMenu
+            align='end'
+            {...menuPropsSubmit}
+            anchorRef={submitRef}
+            onClick={() => toggleMenuSubmit(false)}
+            onClose={() => toggleMenuSubmit(false)}
+            menuStyle={{
+              marginTop: '10px',
+            }}
+          >
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              استخدام
+            </MenuItem>
+
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/research`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              ثبت سفارش
+            </MenuItem>
+
+            <MenuItem
+              onClick={() =>
+                router.push(`${Resource.Routes.ABOUT}/qualityControl`)
+              }
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              ارتباط با مشتری
+            </MenuItem>
+          </ControlledMenu>
+        </div>
       </div>
       <Sidebar setShow={setShow} show={show} />
     </nav>
@@ -359,14 +495,17 @@ const Header = () => {
   const context = useContext(EnqueryContext);
   const router = useRouter();
   const productRef = useRef(null);
-
   const aboutRef = useRef(null);
+  const submitRef = useRef(null);
 
   const [menuPropsProduct, toggleMenuProduct] = useMenuState({
     transition: true,
   });
-
   const [menuPropsAbout, toggleMenuAbout] = useMenuState({ transition: true });
+
+  const [menuPropsSubmit, toggleMenuSubmit] = useMenuState({
+    transition: true,
+  });
 
   const [showSideBar, setShowSideBar] = useState(false);
   const { width } = useWindowSize();
@@ -735,11 +874,59 @@ const Header = () => {
             }}
           >
             <MenuItem
-              onClick={() => router.push(Resource.Routes.ABOUT)}
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
               className='text-2xl border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
             >
-              درباره‌شرکت و بخش تحقیق و توسعه
+              تاريخچه متالورژی
+            </MenuItem>
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              تاريخچه شرکت
+            </MenuItem>
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              آموزش
+            </MenuItem>
+
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/research`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              بخش تحقیق و توسعه
+            </MenuItem>
+
+            <MenuItem
+              onClick={() =>
+                router.push(`${Resource.Routes.ABOUT}/qualityControl`)
+              }
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              کنترل کیفیت و آزمایشگاه
+            </MenuItem>
+
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/goals`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              اهداف کیفیتی
+            </MenuItem>
+
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/policy`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              خط مشی کیفیت
             </MenuItem>
           </ControlledMenu>
         </div>
@@ -755,14 +942,55 @@ const Header = () => {
             <hr className='h-2 w-28 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
           </div>
         </Link>
-
-        <button
-          onClick={context.move}
-          className='p-4 text-white bg-[#EFAF43] rounded-md mr-64 
+        <div>
+          <button
+            ref={submitRef}
+            onClick={() => {
+              // context.move();
+              toggleMenuSubmit(true);
+            }}
+            className='p-4 text-white bg-[#EFAF43] rounded-md mr-64 
         transition-all duration-300 hover:bg-[#333333] text-2xl'
-        >
-          ثبت درخواست
-        </button>
+          >
+            همکاری
+          </button>
+          <ControlledMenu
+            align='end'
+            {...menuPropsSubmit}
+            anchorRef={submitRef}
+            onClick={() => toggleMenuSubmit(false)}
+            onClose={() => toggleMenuSubmit(false)}
+            menuStyle={{
+              marginTop: '10px',
+            }}
+          >
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              استخدام
+            </MenuItem>
+
+            <MenuItem
+              onClick={() => router.push(`${Resource.Routes.ABOUT}/research`)}
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              ثبت سفارش
+            </MenuItem>
+
+            <MenuItem
+              onClick={() =>
+                router.push(`${Resource.Routes.ABOUT}/qualityControl`)
+              }
+              className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+            >
+              ارتباط با مشتری
+            </MenuItem>
+          </ControlledMenu>
+        </div>
       </div>
     </nav>
   );

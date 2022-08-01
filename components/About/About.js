@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Resource from '../../public/Resource';
+import PropTypes from 'prop-types';
 
-const About = () => {
+const About = (props) => {
   return (
     <div className='overflow-hidden relative mb-16'>
       <div className='relative w-screen h-[100vh]'>
@@ -19,11 +19,15 @@ const About = () => {
      absolute top-1/2 left-1/2 w-full translate-x-[-50%] translate-y-[-30%]'
       >
         <h2 className='text-7xl text-gray-800 text-center mb-20 leading-normal'>
-          بخش تحقیق و توسعه
+          {props.title}
         </h2>
       </div>
     </div>
   );
+};
+
+About.propTypes = {
+  title: PropTypes.string,
 };
 
 export default About;
