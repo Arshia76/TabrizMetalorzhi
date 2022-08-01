@@ -19,7 +19,7 @@ const AboutPage = () => {
   } else if (route === 'policy') {
     title = 'خط مشی کیفیت';
   } else {
-    return;
+    title = 'درباره ما';
   }
 
   const content = aboutPart[route];
