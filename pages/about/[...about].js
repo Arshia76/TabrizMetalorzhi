@@ -18,6 +18,10 @@ const AboutPage = () => {
     title = 'اهداف کیفیتی';
   } else if (route === 'policy') {
     title = 'خط مشی کیفیت';
+  } else if (route === 'metalorghy') {
+    title = 'تاریخچه متالورژی پودر';
+  } else if (route === 'tabrizMetalorghy') {
+    title = 'تاریخچه متالورژی پودر تبریز';
   } else {
     title = 'درباره ما';
   }

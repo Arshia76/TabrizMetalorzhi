@@ -29,8 +29,8 @@ const HeaderContent = () => {
           <BiSearch size={55} color='grey' />
           <input
             type='text'
-            className='w-full pr-6 text-3xl text-black'
-            placeholder='دنبال چی هستین؟'
+            className='w-full pr-6 text-3xl text-black !outline-none '
+            placeholder='جستجو'
           />
         </div>
       </div>

@@ -10,7 +10,6 @@ const CataloguePage = () => {
       mb-64'
       >
         <CatalogueCard />
-        <CatalogueCard />
       </div>
     </div>
   );

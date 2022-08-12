@@ -3,7 +3,9 @@ import Resource from '../../public/Resource';
 
 const CatalogueCard = () => {
   return (
-    <div
+    <a
+      href={'/Resource/Files/c001 (3 files merged)-merged.pdf'}
+      download
       className='shadow-2xl rounded-2xl bg-white cursor-pointer
     overflow-hidden w-1/3 mx-10'
     >
@@ -15,7 +17,7 @@ const CatalogueCard = () => {
           height={150}
           objectFit='cover'
         />
-        <span className='text-3xl text-black ml-auto mt-10'>نام کالا</span>
+        <span className='text-3xl text-black ml-auto mt-10'>کاتالوگ</span>
       </div>
 
       <button
@@ -24,7 +26,7 @@ const CatalogueCard = () => {
       >
         مشاهده
       </button>
-    </div>
+    </a>
   );
 };
 
