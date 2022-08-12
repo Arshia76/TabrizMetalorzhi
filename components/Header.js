@@ -324,16 +324,35 @@ const Sidebar = ({ setShow, show }) => {
               </span>
             </div>
           </div>
+          {/* News */}
+          <div className='flex flex-col items-start mt-20'>
+            <h4
+              className='text-4xl text-gray-900 p-4 font-[500] mb-2 cursor-pointer'
+              onClick={() => {
+                router.push(`${Resource.Routes.NEWS}`);
+                setShow(false);
+              }}
+            >
+              اخبار
+            </h4>
+          </div>
           {/* About */}
           <div className='flex flex-col items-start mt-20 '>
-            <h4 className='text-4xl text-gray-900 p-4 font-[500] mb-2'>
+            <h4
+              className='text-4xl text-gray-900 p-4 font-[500] mb-2 cursor-pointer'
+              onClick={() => {
+                router.push(`${Resource.Routes.NEWS}`);
+                setShow(false);
+              }}
+            >
               درباره ما
             </h4>
+
             <div className='flex flex-col items-start'>
               <span
                 className='text-3xl p-4 cursor-pointer'
                 onClick={() => {
-                  router.push(`${Resource.Routes.ABOUT}/about`);
+                  router.push(`${Resource.Routes.ABOUT}/metalorghy`);
                   setShow(false);
                 }}
               >
@@ -342,7 +361,7 @@ const Sidebar = ({ setShow, show }) => {
               <span
                 className='text-3xl p-4 cursor-pointer'
                 onClick={() => {
-                  router.push(`${Resource.Routes.ABOUT}/about`);
+                  router.push(`${Resource.Routes.ABOUT}/tabrizMetalorghy`);
                   setShow(false);
                 }}
               >
@@ -876,7 +895,7 @@ const Header = () => {
             </div>
           </Link>
 
-          <Link passHref href={Resource.Routes.CATALOGUE}>
+          <Link passHref href={Resource.Routes.NEWS}>
             <div className='group mx-4'>
               <div className='text-3xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
                 اخبار

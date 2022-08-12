@@ -60,6 +60,7 @@ class Resource {
     ABOUT: '/about',
     CONTACT: '/contact',
     CATEGORY: '/products/category',
+    NEWS: '/news',
   };
 }
 
