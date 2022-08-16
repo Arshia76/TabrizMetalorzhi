@@ -14,6 +14,16 @@ import BRONZE from './Images/d&e/bronze powder.png';
 import COPPER from './Images/d&e/copper powder.png';
 import IRON from './Images/d&e/iron alloy & non-alloy powder.png';
 import YATAGAN from './Images/d&e/yatagan.png';
+import YATAGANJ from './Images/d&e/yatagan.jpg';
+import CAROUSEL1 from './Images/carousel/1.jpg';
+import CAROUSEL2 from './Images/carousel/2.jpg';
+import CAROUSEL3 from './Images/carousel/3.jpg';
+import CAROUSEL4 from './Images/carousel/4.jpg';
+import CAROUSEL5 from './Images/carousel/5.jpg';
+import CAROUSEL6 from './Images/carousel/6.jpeg';
+import CAROUSEL7 from './Images/carousel/7.jpg';
+import CAROUSEL8 from './Images/carousel/8.jpg';
+import NACI from './Images/footer/Naci.png';
 
 class Resource {
   static Images = {
@@ -33,6 +43,7 @@ class Resource {
     COPPER,
     IRON,
     YATAGAN,
+    YATAGANJ,
     GOVAHI1: '../Resource/Images/Govahi/govahi1.jpg',
     GOVAHI2: '../Resource/Images/Govahi/govahi2.jpg',
     GOVAHI3: '../Resource/Images/Govahi/govahi3.jpg',
@@ -51,6 +62,15 @@ class Resource {
     GOVAHI7_BIG: '../Resource/Images/Govahi/govahi7-big.jpg',
     GOVAHI8_BIG: '../Resource/Images/Govahi/govahi8-big.jpg',
     GOVAHI9_BIG: '../Resource/Images/Govahi/govahi9-big.jpg',
+    CAROUSEL1,
+    CAROUSEL2,
+    CAROUSEL3,
+    CAROUSEL4,
+    CAROUSEL5,
+    CAROUSEL6,
+    CAROUSEL7,
+    CAROUSEL8,
+    NACI,
   };
 
   static Routes = {

@@ -5,6 +5,7 @@ import '../public/Resource/Stylesheets/fontiran.css';
 import '../public/Resource/Stylesheets/responsive.css';
 import '@szhsin/react-menu/dist/index.css';
 import '../styles/Carousel.css';
+import 'react-awesome-slider/dist/styles.css';
 import 'leaflet/dist/leaflet.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 import '../styles/Header.css';

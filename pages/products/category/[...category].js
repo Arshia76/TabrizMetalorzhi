@@ -34,7 +34,7 @@ const CategoryPage = () => {
             : data?.category.description
         }
       />
-      <div
+      {/* <div
         className='flex flex-wrap items-center justify-evenly px-32 translate-y-[-40px]
       mb-10'
       >
@@ -76,7 +76,7 @@ const CategoryPage = () => {
                   />
                 );
               })}
-      </div>
+      </div> */}
     </div>
   );
 };

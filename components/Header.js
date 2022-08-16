@@ -14,6 +14,7 @@ import {
   AiOutlineFacebook,
   AiOutlineLinkedin,
 } from 'react-icons/ai';
+import { BiSearch } from 'react-icons/bi';
 
 const Sidebar = ({ setShow, show }) => {
   const router = useRouter();
@@ -551,28 +552,41 @@ const Header = () => {
   }
 
   return (
-    <nav className='fixed top-0 left-0 px-10 w-full z-[1000]'>
-      <div className='flex items-center justify-center bg-[#E6E6E6] p-4 pr-20 shadow-lg'>
-        <AiOutlineFacebook
-          size={35}
-          color='grey'
-          style={{ margin: '0 8px', cursor: 'pointer' }}
-        />
-        <AiOutlineLinkedin
-          size={35}
-          color='grey'
-          style={{ margin: '0 8px', cursor: 'pointer' }}
-        />
-        <AiOutlineWhatsApp
-          size={35}
-          color='grey'
-          style={{ margin: '0 8px', cursor: 'pointer' }}
-        />
+    <nav className='z-[1000]'>
+      <div className='flex items-center justify-between bg-[#333] px-10 p-1 shadow-lg'>
+        <div className='flex items-center '>
+          <AiOutlineFacebook
+            size={22}
+            color='#fff'
+            style={{ margin: '0 3px', cursor: 'pointer' }}
+            className='hover:!text-orange-400 transition-all ease-in duration-300'
+          />
+          <AiOutlineLinkedin
+            size={22}
+            color='#fff'
+            style={{ margin: '0 3px', cursor: 'pointer' }}
+            className='hover:!text-orange-400 transition-all ease-in duration-300'
+          />
+          <AiOutlineWhatsApp
+            size={22}
+            color='#fff'
+            style={{ margin: '0 3px', cursor: 'pointer' }}
+            className='hover:!text-orange-400 transition-all ease-in duration-300'
+          />
+        </div>
+        <div className='flex items-center rounded-lg my-1 py-1 bg-white'>
+          <BiSearch size={24} color='grey' />
+          <input
+            type='text'
+            className='w-full pr-6 text-2xl text-black !outline-none '
+            placeholder='جستجو'
+          />
+        </div>
       </div>
 
       <div
-        className='relative bg-white items-center justify-around 
-      rounded-b-md shadow-lg  md:flex'
+        className='relative flex-row-reverse bg-white items-center justify-end 
+      rounded-b-md shadow-lg px-20 md:flex'
       >
         <Link passHref href={Resource.Routes.HOME}>
           <Image
@@ -581,15 +595,15 @@ const Header = () => {
             width={80}
             height={100}
             objectFit='contain'
-            className='cursor-pointer'
+            className='cursor-pointer '
           />
         </Link>
-        <div className='flex items-center justify-center '>
-          <div className='mx-4'>
+        <div className='flex items-center justify-start flex-1'>
+          <div className='mx-10'>
             <Link passHref href={Resource.Routes.PRODUCTS}>
               <div className='cursor-pointer group'>
                 <div
-                  className='text-3xl duration-300 transition-all
+                  className='text-4xl duration-300 transition-all
                hover:text-[#EFAF43]'
                   ref={productRef}
                   onMouseEnter={() => toggleMenuProduct(true)}
@@ -887,28 +901,28 @@ const Header = () => {
           </div>
 
           <Link passHref href={Resource.Routes.CATALOGUE}>
-            <div className='group mx-4'>
-              <div className='text-3xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
-                کاتالوگ‌ها
+            <div className='group mx-10'>
+              <div className='text-4xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
+                کاتالوگ
               </div>
               <hr className='h-2 w-28 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
             </div>
           </Link>
 
           <Link passHref href={Resource.Routes.NEWS}>
-            <div className='group mx-4'>
-              <div className='text-3xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
+            <div className='group mx-10'>
+              <div className='text-4xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
                 اخبار
               </div>
               <hr className='h-2 w-14 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
             </div>
           </Link>
 
-          <div className='mx-4'>
+          <div className='mx-10'>
             <Link passHref href={Resource.Routes.ABOUT}>
               <div className='cursor-pointer group duration-300 transition-al hover:text-[#EFAF43]'>
                 <div
-                  className='text-3xl'
+                  className='text-4xl'
                   ref={aboutRef}
                   onMouseEnter={() => toggleMenuAbout(true)}
                 >
@@ -991,9 +1005,9 @@ const Header = () => {
           </div>
 
           <Link passHref href={Resource.Routes.CONTACT}>
-            <div className='group mx-4'>
+            <div className='group mx-10'>
               <div
-                className='text-3xl cursor-pointer duration-300 transition-all
+                className='text-4xl cursor-pointer duration-300 transition-all
          hover:text-[#EFAF43] '
               >
                 تماس‌با‌ما
@@ -1001,55 +1015,56 @@ const Header = () => {
               <hr className='h-2 w-28 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
             </div>
           </Link>
-        </div>
-        <div>
-          <button
-            ref={submitRef}
-            onClick={() => {
-              // context.move();
-              toggleMenuSubmit(true);
-            }}
-            className='px-8 py-4 text-white bg-[#EFAF43] rounded-md  
-        transition-all duration-300 hover:bg-[#333333] text-2xl'
-          >
-            همکاری
-          </button>
-          <ControlledMenu
-            align='end'
-            {...menuPropsSubmit}
-            anchorRef={submitRef}
-            onClick={() => toggleMenuSubmit(false)}
-            onClose={() => toggleMenuSubmit(false)}
-            menuStyle={{
-              marginTop: '10px',
-            }}
-          >
-            <MenuItem
-              onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
-              className='text-2xl border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+          <div>
+            <button
+              ref={submitRef}
+              onMouseEnter={() => {
+                // context.move();
+                toggleMenuSubmit(true);
+              }}
+              // onMouseOut={() => toggleMenuSubmit(false)}
+              className='px-8 py-4 text-white bg-[#EFAF43] rounded-md  
+        transition-all duration-300 hover:bg-[#333333] text-3xl'
             >
-              استخدام
-            </MenuItem>
+              همکاری
+            </button>
+            <ControlledMenu
+              align='end'
+              {...menuPropsSubmit}
+              anchorRef={submitRef}
+              onMouseLeave={() => toggleMenuSubmit(false)}
+              onClose={() => toggleMenuSubmit(false)}
+              menuStyle={{
+                marginTop: '10px',
+              }}
+            >
+              <MenuItem
+                onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
+                className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+              >
+                استخدام
+              </MenuItem>
 
-            <MenuItem
-              onClick={() => router.push(`${Resource.Routes.ABOUT}/research`)}
-              className='text-2xl border-transparent border-solid border-r-4 
+              <MenuItem
+                onClick={() => router.push(`${Resource.Routes.ABOUT}/research`)}
+                className='text-2xl border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-            >
-              ثبت سفارش
-            </MenuItem>
+              >
+                ثبت سفارش
+              </MenuItem>
 
-            <MenuItem
-              onClick={() =>
-                router.push(`${Resource.Routes.ABOUT}/qualityControl`)
-              }
-              className='text-2xl border-transparent border-solid border-r-4 
+              <MenuItem
+                onClick={() =>
+                  router.push(`${Resource.Routes.ABOUT}/qualityControl`)
+                }
+                className='text-2xl border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-            >
-              ارتباط با مشتری
-            </MenuItem>
-          </ControlledMenu>
+              >
+                ارتباط با مشتری
+              </MenuItem>
+            </ControlledMenu>
+          </div>
         </div>
       </div>
     </nav>

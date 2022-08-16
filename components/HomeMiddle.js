@@ -76,17 +76,17 @@ const HomeMiddle = () => {
               borderLeft: '4px solid #d2d2d2',
             }}
           >
-            <div className='flex flex-col'>
+            <div className='flex flex-col ml-48'>
               <span className='text-2xl text-gray-700 mb-6'>بیش از</span>
-              <span className='text-6xl text-black mb-2 font-[500]'>100</span>
+              <span className='text-6xl text-black mb-2 font-[500]'>1000</span>
               <span className='text-6xl text-black mb-8 font-[500]'>تن</span>
               <p className='text-4xl text-gray-800 text-justify  leading-normal'>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                قطعات متالورژی پودر در سال
               </p>
             </div>
             <Image
-              width={150}
-              height={150}
+              width={120}
+              height={120}
               src={
                 'https://debearings.com/wp-content/uploads/2016/08/de_icon_kg.png'
               }
@@ -100,12 +100,12 @@ const HomeMiddle = () => {
               borderLeft: '4px solid #d2d2d2',
             }}
           >
-            <div className='flex flex-col'>
+            <div className='flex flex-col ml-48'>
               <span className='text-2xl text-gray-700 mb-6'>بیش از</span>
               <span className='text-6xl text-black mb-2 font-[500]'>30</span>
               <span className='text-6xl text-black mb-8 font-[500]'>سال</span>
               <p className='text-4xl text-gray-800 text-justify  leading-normal'>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                تجربه کاری در زمینه تولید قطعات به روش متالورژی پودر
               </p>
             </div>
             <Image
@@ -124,19 +124,17 @@ const HomeMiddle = () => {
               borderLeft: '4px solid #d2d2d2',
             }}
           >
-            <div className='flex flex-col'>
-              <span className='text-2xl text-gray-700 mb-6'>روش</span>
-              <span className='text-6xl text-black mb-2 font-[500]'>3</span>
-              <span className='text-6xl text-black mb-8 font-[500]'>
-                مرحله‌ای ما
-              </span>
+            <div className='flex flex-col ml-48'>
+              <span className='text-2xl text-gray-700 mb-6'>بیش از</span>
+              <span className='text-6xl text-black mb-2 font-[500]'>1500</span>
+              <span className='text-6xl text-black mb-8 font-[500]'>تن</span>
               <p className='text-4xl text-gray-800 text-justify leading-normal'>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                پودر فلزات رنگین در سال
               </p>
             </div>
             <Image
-              width={150}
-              height={150}
+              width={120}
+              height={120}
               src={
                 'https://debearings.com/wp-content/uploads/2016/08/de_icon_feet.png'
               }

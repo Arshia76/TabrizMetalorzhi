@@ -10,8 +10,8 @@ export default function Home() {
     <main className='overflow-hidden'>
       <HeaderContent />
       <div
-        className='flex items-center justify-evenly flex-wrap mb-10  
-         md:px-32 md:translate-y-[-40px]   
+        className='flex items-center justify-evenly flex-wrap my-10  
+         md:px-32 
        '
       >
         <ProductCard
@@ -21,7 +21,7 @@ export default function Home() {
         />
         <ProductCard
           name='یاتاقان'
-          img={Resource.Images.YATAGAN}
+          img={Resource.Images.YATAGANJ}
           onClick={() => router.push(`${Resource.Routes.CATEGORY}/یاتاقان`)}
         />
         <ProductCard
