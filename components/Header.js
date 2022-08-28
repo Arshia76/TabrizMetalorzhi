@@ -800,7 +800,7 @@ const Header = () => {
               }}
             >
               <MenuItem
-                onClick={() => router.push(`${Resource.Routes.ABOUT}/teach`)}
+                onClick={() => router.push('/employ')}
                 className='text-2xl border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
               >
@@ -808,7 +808,7 @@ const Header = () => {
               </MenuItem>
 
               <MenuItem
-                onClick={() => router.push(`${Resource.Routes.ABOUT}/research`)}
+                onClick={() => router.push('/employ')}
                 className='text-2xl border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
               >
@@ -816,9 +816,7 @@ const Header = () => {
               </MenuItem>
 
               <MenuItem
-                onClick={() =>
-                  router.push(`${Resource.Routes.ABOUT}/qualityControl`)
-                }
+                onClick={() => router.push('/employ')}
                 className='text-2xl border-transparent border-solid border-r-4 
               hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
               >
