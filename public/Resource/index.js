@@ -24,6 +24,8 @@ import CAROUSEL6 from './Images/carousel/6.jpeg';
 import CAROUSEL7 from './Images/carousel/7.jpg';
 import CAROUSEL8 from './Images/carousel/8.jpg';
 import NACI from './Images/footer/Naci.png';
+import METALORIMG from './Images/metalorImg.jpg';
+import CATALOGUE from './Images/catalogue.jpg';
 
 class Resource {
   static Images = {
@@ -71,6 +73,8 @@ class Resource {
     CAROUSEL7,
     CAROUSEL8,
     NACI,
+    METALORIMG,
+    CATALOGUE,
   };
 
   static Routes = {

@@ -9,9 +9,12 @@ export default function Home() {
   return (
     <main className='overflow-hidden'>
       <HeaderContent />
+      <h2 className='text-7xl mt-32 mb-16 text-center font-semibold'>
+        محصولات شرکت
+      </h2>
       <div
         className='flex items-center justify-evenly flex-wrap my-10  
-         md:px-32 
+         md:px-2
        '
       >
         <ProductCard

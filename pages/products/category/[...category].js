@@ -34,26 +34,12 @@ const CategoryPage = () => {
             : data?.category.description
         }
       />
-      {/* <div
+      <div
         className='flex flex-wrap items-center justify-evenly px-32 translate-y-[-40px]
       mb-10'
       >
         {router.query?.category?.length > 1
-          ? allProducts
-              .filter(
-                (data) =>
-                  data.category.name === router.query?.category?.[0] &&
-                  data.subCategory.name === router.query?.category?.[1]
-              )
-              .map((product) => {
-                return (
-                  <ProductCard
-                    key={product.id}
-                    name={product.name}
-                    img={product.img}
-                  />
-                );
-              })
+          ? null
           : allProducts
               .filter(
                 (data, index, array) =>
@@ -76,7 +62,7 @@ const CategoryPage = () => {
                   />
                 );
               })}
-      </div> */}
+      </div>
     </div>
   );
 };

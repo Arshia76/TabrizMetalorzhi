@@ -28,12 +28,15 @@ const Footer = () => {
       </div> */}
       <div className='flex flex-col md:flex-row justify-around items-start px-16 py-20 bg-[#333]'>
         <div className='flex flex-col mb-10 md:mb-0 '>
-          <h2 className='text-5xl text-[#ccc] font-semibold mb-4'>
+          <h2
+            className='text-4xl text-[#ccc] font-semibold mb-4 pb-4'
+            style={{ borderBottom: '2px solid white' }}
+          >
             دفتر مرکزی
           </h2>
-          <div className='flex items-center mt-10'>
+          <div className='flex items-start mt-10'>
             <GoLocation size={22} color='#ccc' />
-            <span className='text-3xl text-[#ccc] mr-2 w-[250px]'>
+            <span className='text-3xl leading-normal text-[#ccc] mr-2 w-[250px]'>
               تبریز-کیلومتر 20 جاده قدیم تهران- روبروی کاشی تبریز-کوی متالورژی
             </span>
           </div>
@@ -51,7 +54,10 @@ const Footer = () => {
           </div>
         </div>
         <div className='mx-22 mb-10 md:mb-0 '>
-          <h2 className='text-5xl text-[#ccc] font-semibold mb-12'>
+          <h2
+            className='text-4xl text-[#ccc] font-semibold mb-12 pb-4'
+            style={{ borderBottom: '2px solid white' }}
+          >
             گواهی‌نامه‌ها و نماد‌ها
           </h2>
           <div className='flex items-start justify-center'>
@@ -83,7 +89,10 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h2 className='text-5xl text-[#ccc] font-semibold mb-4'>
+          <h2
+            className='text-4xl text-[#ccc] font-semibold mb-4 pb-4'
+            style={{ borderBottom: '2px solid white' }}
+          >
             دسترسی سریع
           </h2>
           <div className='flex flex-col'>
@@ -93,7 +102,7 @@ const Footer = () => {
                 className='text-3xl duration-300 ease-in transition-all hover:text-orange-400
               cursor-pointer text-[#ccc]'
               >
-                خانه
+                صفحه اصلی
               </span>
             </div>
             <div className='flex items-center mt-6'>

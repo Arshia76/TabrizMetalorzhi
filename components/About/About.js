@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const About = (props) => {
   return (
     <div className='overflow-hidden relative mb-16'>
-      <div className='relative w-screen h-[100vh]'>
+      <div className='relative w-screen h-[50vh]'>
         <Image
           src={
             'https://debearings.com/wp-content/themes/d_och_e/assets/images/debearings-pattern-2.png'

@@ -7,17 +7,16 @@ const CatalogueCard = () => {
       href={'/Resource/Files/c001 (3 files merged)-merged.pdf'}
       download
       className='shadow-2xl rounded-2xl bg-white cursor-pointer
-    overflow-hidden w-1/3 mx-10'
+    overflow-hidden mx-auto'
     >
-      <div className='px-12 py-10 flex flex-col items-center justify-center'>
+      <div className='flex flex-col items-center justify-center'>
         <Image
-          src={Resource.Images.BG}
+          src={Resource.Images.CATALOGUE}
           alt='product'
-          width={200}
-          height={150}
+          width={300}
+          height={250}
           objectFit='cover'
         />
-        <span className='text-3xl text-black ml-auto mt-10'>کاتالوگ</span>
       </div>
 
       <button

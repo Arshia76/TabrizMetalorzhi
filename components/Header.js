@@ -23,7 +23,7 @@ const Sidebar = ({ setShow, show }) => {
       <CSSTransition appear={show} in={show} timeout={1000} classNames='navbar'>
         <div className='w-[60%] z-[9999] fixed top-0 right-0 h-screen translate-x-[1000px] bg-white overflow-auto py-8 px-2'>
           <div className='flex items-center justify-between mb-10 px-4'>
-            <h2 className='font-[500] text-4xl'>دسته بندی</h2>
+            <h2 className='font-[500] text-3xl'>دسته بندی</h2>
             <GrClose
               cursor={'pointer'}
               size={25}
@@ -41,7 +41,7 @@ const Sidebar = ({ setShow, show }) => {
             />
           </Link>
           <div className='flex flex-col items-start mt-20'>
-            <h4 className='text-4xl text-gray-900 font-[500] mb-2 p-4 '>بوش</h4>
+            <h4 className='text-3xl text-gray-900 font-[500] mb-2 p-4 '>بوش</h4>
             <div className='flex flex-col items-start'>
               <span
                 className='text-3xl p-4 cursor-pointer'
@@ -552,58 +552,40 @@ const Header = () => {
   }
 
   return (
-    <nav className='z-[1000]'>
-      <div className='flex items-center justify-between bg-[#333] px-10 p-1 shadow-lg'>
-        <div className='flex items-center '>
-          <AiOutlineFacebook
-            size={22}
-            color='#fff'
-            style={{ margin: '0 3px', cursor: 'pointer' }}
-            className='hover:!text-orange-400 transition-all ease-in duration-300'
-          />
-          <AiOutlineLinkedin
-            size={22}
-            color='#fff'
-            style={{ margin: '0 3px', cursor: 'pointer' }}
-            className='hover:!text-orange-400 transition-all ease-in duration-300'
-          />
-          <AiOutlineWhatsApp
-            size={22}
-            color='#fff'
-            style={{ margin: '0 3px', cursor: 'pointer' }}
-            className='hover:!text-orange-400 transition-all ease-in duration-300'
-          />
-        </div>
-        <div className='flex items-center rounded-lg my-1 py-1 bg-white'>
-          <BiSearch size={24} color='grey' />
-          <input
-            type='text'
-            className='w-full pr-6 text-2xl text-black !outline-none '
-            placeholder='جستجو'
-          />
-        </div>
-      </div>
-
+    <nav className='z-[1000] sticky top-0'>
       <div
-        className='relative flex-row-reverse bg-white items-center justify-end 
-      rounded-b-md shadow-lg px-20 md:flex'
+        className='flex-row-reverse bg-white items-center justify-end 
+      rounded-b-md shadow-lg px-20 md:flex sticky top-0'
       >
         <Link passHref href={Resource.Routes.HOME}>
           <Image
             alt='main-logo'
             src={Resource.Images.LOGO}
             width={80}
-            height={100}
+            height={90}
             objectFit='contain'
             className='cursor-pointer '
           />
         </Link>
-        <div className='flex items-center justify-start flex-1'>
+        <div className='flex items-center justify-center flex-1'>
+          <div className='mx-10'>
+            <Link passHref href={Resource.Routes.HOME}>
+              <div className='group'>
+                <div
+                  className='text-3xl cursor-pointer duration-300 transition-all
+         hover:text-[#EFAF43] '
+                >
+                  صفحه‌اصلی
+                </div>
+                <hr className='h-2 w-32 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
+              </div>
+            </Link>
+          </div>
           <div className='mx-10'>
             <Link passHref href={Resource.Routes.PRODUCTS}>
               <div className='cursor-pointer group'>
                 <div
-                  className='text-4xl duration-300 transition-all
+                  className='text-3xl duration-300 transition-all
                hover:text-[#EFAF43]'
                   ref={productRef}
                   onMouseEnter={() => toggleMenuProduct(true)}
@@ -624,276 +606,46 @@ const Header = () => {
                 marginTop: '25px',
               }}
             >
-              <div className='p-20 flex items-start justify-between'>
-                <div>
+              <div className='px-4 pt-4 flex flex-col items-start justify-between'>
+                <div
+                  onClick={() => router.push(`${Resource.Routes.CATEGORY}/بوش`)}
+                >
                   <MenuItem className='text-3xl mb-4 font-[500]'>بوش</MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/بوش/BG`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری BG
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/بوش/BL`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری BL
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/بوش/BM`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری BM
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/بوش/BS`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری BS
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/بوش/BT`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری BT
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/بوش `)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    مشاهده‌همه
-                  </MenuItem>
                 </div>
-                <div>
+                <div
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/یاتاقان`)
+                  }
+                >
                   <MenuItem className='text-3xl mb-4 font-[500]'>
                     یاتاقان
                   </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(
-                        `${Resource.Routes.CATEGORY}/یاتاقان/یاتاقان پمپ باد`
-                      )
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    یاتاقان پمپ باد
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(
-                        `${Resource.Routes.CATEGORY}/یاتاقان/یاتاقان سواری`
-                      )
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    یاتاقان سواری
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={() =>
-                      router.push(
-                        `${Resource.Routes.CATEGORY}/یاتاقان/یاتاقان سنگین`
-                      )
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    یاتاقان سنگین
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/یاتاقان `)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    مشاهده‌همه
-                  </MenuItem>
                 </div>
-                <div>
+                <div
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی`)
+                  }
+                >
                   <MenuItem className='text-3xl mb-4 font-[500]'>
                     صفحات اصطکاکی
                   </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WG`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری WG
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WL`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری WL
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WM`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری WM
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی/WS`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    سری WS
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    مشاهده‌همه
-                  </MenuItem>
                 </div>
-                <div>
+                <div
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/پودر فلزات`)
+                  }
+                >
                   <MenuItem className='text-3xl mb-4 font-[500]'>
                     پودر فلزات
                   </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(
-                        `${Resource.Routes.CATEGORY}/پودر فلزات/آلومینیوم`
-                      )
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    آلومینیوم
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/پودر فلزات/برنز`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    برنز
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/پودر فلزات/مس`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    مس
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/پودر فلزات/برنج`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    برنج
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(
-                        `${Resource.Routes.CATEGORY}/پودر فلزات/آهن آلیاژی و غیر آلیاژی`
-                      )
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    آهن آلیاژی و غیر آلیاژی
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/پودر فلزات`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    مشاهده‌همه
-                  </MenuItem>
                 </div>
-                <div>
+                <div
+                  onClick={() =>
+                    router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
+                  }
+                >
                   <MenuItem className='text-3xl mb-4 font-[500]'>
                     قطعات خودرو
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    لوله پمپ باد EF7
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    قلاب مهار باد
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    بست باتری IR
-                  </MenuItem>
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    بست باتری V10
-                  </MenuItem>
-
-                  <MenuItem
-                    onClick={() =>
-                      router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی`)
-                    }
-                    className='text-2xl mb-4 border-transparent border-solid border-r-4 
-              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
-                  >
-                    مشاهده‌همه
                   </MenuItem>
                 </div>
               </div>
@@ -902,7 +654,7 @@ const Header = () => {
 
           <Link passHref href={Resource.Routes.CATALOGUE}>
             <div className='group mx-10'>
-              <div className='text-4xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
+              <div className='text-3xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
                 کاتالوگ
               </div>
               <hr className='h-2 w-28 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
@@ -911,7 +663,7 @@ const Header = () => {
 
           <Link passHref href={Resource.Routes.NEWS}>
             <div className='group mx-10'>
-              <div className='text-4xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
+              <div className='text-3xl cursor-pointer duration-300 transition-al hover:text-[#EFAF43]'>
                 اخبار
               </div>
               <hr className='h-2 w-14 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
@@ -922,7 +674,7 @@ const Header = () => {
             <Link passHref href={Resource.Routes.ABOUT}>
               <div className='cursor-pointer group duration-300 transition-al hover:text-[#EFAF43]'>
                 <div
-                  className='text-4xl'
+                  className='text-3xl'
                   ref={aboutRef}
                   onMouseEnter={() => toggleMenuAbout(true)}
                 >
@@ -1001,13 +753,22 @@ const Header = () => {
               >
                 خط مشی کیفیت
               </MenuItem>
+              <MenuItem
+                onClick={() =>
+                  router.push(`${Resource.Routes.ABOUT}/certification`)
+                }
+                className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+              >
+                گواهی‌ها
+              </MenuItem>
             </ControlledMenu>
           </div>
 
           <Link passHref href={Resource.Routes.CONTACT}>
             <div className='group mx-10'>
               <div
-                className='text-4xl cursor-pointer duration-300 transition-all
+                className='text-3xl cursor-pointer duration-300 transition-all
          hover:text-[#EFAF43] '
               >
                 تماس‌با‌ما

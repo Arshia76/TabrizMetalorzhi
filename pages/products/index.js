@@ -10,13 +10,15 @@ const ProductsPage = () => {
         className='flex items-center flex-wrap justify-evenly px-32 translate-y-[-40px]
       mb-10'
       >
-        {allProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            name={product.subCategory.name}
-            img={product.img}
-          />
-        ))}
+        {allProducts
+          .filter((p, index) => allProducts.indexOf(p) === index)
+          .map((product) => (
+            <ProductCard
+              key={product.id}
+              name={product.subCategory.name}
+              img={product.img}
+            />
+          ))}
       </div>
     </main>
   );

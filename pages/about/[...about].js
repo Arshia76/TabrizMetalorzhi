@@ -2,6 +2,7 @@ import About from '../../components/About/About';
 import AboutContent from '../../components/About/AboutContent';
 import { useRouter } from 'next/router';
 import { aboutPart } from '../../data';
+import Resource from '../../public/Resource';
 
 const AboutPage = () => {
   const router = useRouter();
@@ -22,15 +23,18 @@ const AboutPage = () => {
     title = 'تاریخچه متالورژی پودر';
   } else if (route === 'tabrizMetalorghy') {
     title = 'تاریخچه متالورژی پودر تبریز';
+  } else if (route === 'certification') {
+    title = 'گواهی‌ها';
   } else {
-    title = 'درباره ما';
+    router.push(Resource.Routes.HOME);
   }
 
   const content = aboutPart[route];
+  const isCertification = route === 'certification';
   return (
     <main>
       <About title={title} />
-      <AboutContent content={content} />
+      <AboutContent content={content} isCertification={isCertification} />
     </main>
   );
 };

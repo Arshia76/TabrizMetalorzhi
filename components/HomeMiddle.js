@@ -1,19 +1,21 @@
 import Image from 'next/image';
 import Carousel from './Carousel/Carousel';
+import Resource from '../public/Resource';
+import Feature from './Feature';
 
 const HomeMiddle = () => {
   return (
-    <div className='px-8 md:px-40'>
+    <div className='px-8 md:px-40 mt-10 w-full'>
       {/* firstPart */}
-      <div
-        className='grid grid-cols-1 md:grid-cols-3 gap-10 
-      justify-items-center md:justify-items-end w-full'
-      >
-        <div className='md:col-span-2'>
-          <h2 className='text-5xl text-black leading-normal mb-10'>
+      <div className='flex flex-wrap justify-between  mt-32 mb-20'>
+        <div className='flex-1'>
+          <h2
+            className='text-5xl text-black leading-normal mb-10 text-center
+          font-semibold'
+          >
             تاریخچه متالورژی پودر
           </h2>
-          <p className='text-3xl text-gray-800 leading-normal mb-10 text-justify  '>
+          <p className='text-3xl text-gray-800 leading-normal mb-10 text-justify'>
             متالورژی پودر فرایند ساخت و تولید قطعات فازی است که اساس آن فشردن
             پودرمواد به شکل مورد نظر و تف جوشی آن است که در درجه حرارتی زیر نقطه
             ذوب صورت می‌پذیرد.قطعات متالورژی پودر در انواع صنایع مانند
@@ -32,121 +34,33 @@ const HomeMiddle = () => {
             ایجاد نمود چراکه خلق آینده بسیار پر اهمیت می‌باشد.
           </p>
         </div>
-        <div>
-          <div className='flex items-start mb-24 cursor-pointer'>
-            <Image
-              width={150}
-              height={80}
-              src={
-                'https://debearings.com/wp-content/uploads/2016/02/de_iso_9001.png'
-              }
-              alt='ISO'
-            />
-          </div>
-          <div className='cursor-pointer'>
-            <Image
-              width={150}
-              height={80}
-              src={
-                'https://debearings.com/wp-content/uploads/2016/02/de_iso_14001.png'
-              }
-              alt='ISO'
-            />
-          </div>
+        <div className='flex-1 relative lg:mr-20'>
+          <Image
+            src={Resource.Images.METALORIMG}
+            alt='metalorzhyImage'
+            layout='fill'
+            objectFit='cover'
+            className='rounded-xl absolute'
+          />
         </div>
       </div>
       {/* secondPart */}
-      <div>
-        <div
-          className='w-full flex items-center 
-         justify-center'
-        >
-          <span className='text-[#D2D2D2]  text-8xl'>
-            .....................................................................
-          </span>
-        </div>
-        <div
-          className='flex flex-wrap md:flex-nowrap
-         items-start justify-evenly w-full'
-        >
-          <div
-            className='flex items-start px-16 py-6 w-full'
-            style={{
-              borderRight: '4px solid #d2d2d2',
-              borderLeft: '4px solid #d2d2d2',
-            }}
-          >
-            <div className='flex flex-col ml-48'>
-              <span className='text-2xl text-gray-700 mb-6'>بیش از</span>
-              <span className='text-6xl text-black mb-2 font-[500]'>1000</span>
-              <span className='text-6xl text-black mb-8 font-[500]'>تن</span>
-              <p className='text-4xl text-gray-800 text-justify  leading-normal'>
-                قطعات متالورژی پودر در سال
-              </p>
-            </div>
-            <Image
-              width={120}
-              height={120}
-              src={
-                'https://debearings.com/wp-content/uploads/2016/08/de_icon_kg.png'
-              }
-              alt='kilogeram'
-            />
-          </div>
-
-          <div
-            className='flex items-start px-16 py-6 w-full'
-            style={{
-              borderLeft: '4px solid #d2d2d2',
-            }}
-          >
-            <div className='flex flex-col ml-48'>
-              <span className='text-2xl text-gray-700 mb-6'>بیش از</span>
-              <span className='text-6xl text-black mb-2 font-[500]'>30</span>
-              <span className='text-6xl text-black mb-8 font-[500]'>سال</span>
-              <p className='text-4xl text-gray-800 text-justify  leading-normal'>
-                تجربه کاری در زمینه تولید قطعات به روش متالورژی پودر
-              </p>
-            </div>
-            <Image
-              width={150}
-              height={150}
-              src={
-                'https://debearings.com/wp-content/uploads/2016/08/de_icon_check-1.png'
-              }
-              alt='experience'
-            />
-          </div>
-
-          <div
-            className='flex items-start px-16 py-6 w-full'
-            style={{
-              borderLeft: '4px solid #d2d2d2',
-            }}
-          >
-            <div className='flex flex-col ml-48'>
-              <span className='text-2xl text-gray-700 mb-6'>بیش از</span>
-              <span className='text-6xl text-black mb-2 font-[500]'>1500</span>
-              <span className='text-6xl text-black mb-8 font-[500]'>تن</span>
-              <p className='text-4xl text-gray-800 text-justify leading-normal'>
-                پودر فلزات رنگین در سال
-              </p>
-            </div>
-            <Image
-              width={120}
-              height={120}
-              src={
-                'https://debearings.com/wp-content/uploads/2016/08/de_icon_feet.png'
-              }
-              alt='3-way-method'
-            />
-          </div>
-        </div>
-        <div className='w-full flex items-center justify-center'>
-          <span className='text-[#D2D2D2]  text-8xl'>
-            .....................................................................
-          </span>
-        </div>
+      <div
+        className='flex flex-wrap
+         items-center justify-evenly w-full'
+      >
+        <Feature
+          content='بیش از 1000 تن قطعات متالورژی پودر در سال'
+          img='https://debearings.com/wp-content/uploads/2016/08/de_icon_kg.png'
+        />
+        <Feature
+          content='بیش از 30 سال تجربه کاری در زمینه تولید قطعات به روش متالورژی پودر'
+          img='https://debearings.com/wp-content/uploads/2016/08/de_icon_check-1.png'
+        />
+        <Feature
+          content='بیش از 1500 تن پودر فلزات رنگین در سال'
+          img='https://debearings.com/wp-content/uploads/2016/08/de_icon_feet.png'
+        />
       </div>
 
       {/* thirdPart */}
