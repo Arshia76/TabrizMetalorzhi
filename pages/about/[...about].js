@@ -26,7 +26,7 @@ const AboutPage = () => {
   } else if (route === 'certification') {
     title = 'گواهی‌ها';
   } else {
-    router.push(Resource.Routes.HOME);
+    title = 'درباره ما';
   }
 
   const content = aboutPart[route];
