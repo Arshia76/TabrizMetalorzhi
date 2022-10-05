@@ -247,7 +247,7 @@ const EmployForm = () => {
           </div>
         </div>
       </div>
-      <div className='w-full flex justify-center'>
+      <div className='w-full flex justify-start'>
         <button
           className='w-[150px] p-4 text-3xl text-white bg-orange-600
       rounded-lg mt-24 transition-all duration-300 ease-in hover:bg-gray-100 hover:text-orange-600'

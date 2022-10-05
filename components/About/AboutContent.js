@@ -51,7 +51,7 @@ const AboutContent = (props) => {
             </>
           ) : (
             <div className=' mb-10 mt-14'>
-              <h1 className='text-3xl whitespace-pre-wrap px-6 text-black leading-loose text-justify'>
+              <h1 className='text-3xl whitespace-pre-line px-6 text-black leading-loose text-justify'>
                 {props.content}
               </h1>
             </div>
