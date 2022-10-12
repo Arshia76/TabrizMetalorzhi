@@ -1,5 +1,5 @@
-import ProductsHero from '../../components/Products/ProductsHero';
-import ProductCard from '../../components/ProductCard';
+import ProductsHero from '../../components/Page/Products/ProductsHero';
+import ProductCard from '../../components/Common/ProductCard';
 import { allProducts } from '../../data';
 
 const ProductsPage = () => {

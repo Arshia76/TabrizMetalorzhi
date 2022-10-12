@@ -1,5 +1,5 @@
-import { useRef, useState, useContext } from 'react';
-import Resource from '../public/Resource';
+import { useRef, useState } from 'react';
+import Resource from '../../public/Resource';
 import Image from 'next/image';
 import { ControlledMenu, MenuItem, useMenuState } from '@szhsin/react-menu';
 import Link from 'next/link';
@@ -7,14 +7,13 @@ import { GrClose } from 'react-icons/gr';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { CSSTransition } from 'react-transition-group';
 import { useRouter } from 'next/router';
-import useWindowSize from '../hooks/useWindowSize';
-import { EnqueryContext } from './Layout';
+import useWindowSize from '../../hooks/useWindowSize';
 import {
   AiOutlineWhatsApp,
   AiOutlineFacebook,
   AiOutlineLinkedin,
+  AiOutlineInstagram,
 } from 'react-icons/ai';
-import { BiSearch } from 'react-icons/bi';
 
 const Sidebar = ({ setShow, show }) => {
   const router = useRouter();
@@ -436,7 +435,6 @@ const Sidebar = ({ setShow, show }) => {
 };
 
 const ResponsiveHeader = ({ setShow, show }) => {
-  const context = useContext(EnqueryContext);
   const submitRef = useRef(null);
 
   const [menuPropsSubmit, toggleMenuSubmit] = useMenuState({
@@ -457,6 +455,11 @@ const ResponsiveHeader = ({ setShow, show }) => {
           style={{ margin: '0 8px', cursor: 'pointer' }}
         />
         <AiOutlineWhatsApp
+          size={30}
+          color='grey'
+          style={{ margin: '0 8px', cursor: 'pointer' }}
+        />
+        <AiOutlineInstagram
           size={30}
           color='grey'
           style={{ margin: '0 8px', cursor: 'pointer' }}
@@ -529,7 +532,6 @@ const ResponsiveHeader = ({ setShow, show }) => {
 };
 
 const Header = () => {
-  const context = useContext(EnqueryContext);
   const router = useRouter();
   const productRef = useRef(null);
   const aboutRef = useRef(null);
@@ -547,7 +549,7 @@ const Header = () => {
   const [showSideBar, setShowSideBar] = useState(false);
   const { width } = useWindowSize();
 
-  if (width < 768) {
+  if (width < 900) {
     return <ResponsiveHeader show={showSideBar} setShow={setShowSideBar} />;
   }
 
@@ -671,18 +673,16 @@ const Header = () => {
           </Link>
 
           <div className='mx-10'>
-            <Link passHref href={Resource.Routes.ABOUT}>
-              <div className='cursor-pointer group duration-300 transition-al hover:text-[#EFAF43]'>
-                <div
-                  className='text-3xl'
-                  ref={aboutRef}
-                  onMouseEnter={() => toggleMenuAbout(true)}
-                >
-                  درباره‌ما
-                </div>
-                <hr className='h-2 w-24 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
+            <div className='cursor-pointer group duration-300 transition-al hover:text-[#EFAF43]'>
+              <div
+                className='text-3xl'
+                ref={aboutRef}
+                onMouseEnter={() => toggleMenuAbout(true)}
+              >
+                درباره‌ما
               </div>
-            </Link>
+              <hr className='h-2 w-24 hidden group-hover:block absolute bottom-0 bg-[#EFAF43]' />
+            </div>
 
             <ControlledMenu
               align='end'

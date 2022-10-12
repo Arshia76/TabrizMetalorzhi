@@ -1,5 +1,5 @@
-import CategoryHero from '../../../components/Category/CategoryHero';
-import ProductCard from '../../../components/ProductCard';
+import CategoryHero from '../../../components/Page/Category/CategoryHero';
+import ProductCard from '../../../components/Common/ProductCard';
 import { useRouter } from 'next/router';
 import { allProducts } from '../../../data';
 import Resource from '../../../public/Resource';

@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import Carousel from './Carousel/Carousel';
-import Resource from '../public/Resource';
+import Carousel from '../../Common/Carousel/Carousel';
+import Resource from '../../../public/Resource';
 import Feature from './Feature';
 
 const HomeMiddle = () => {
   return (
     <div className='px-8 md:px-40 mt-10 w-full'>
       {/* firstPart */}
-      <div className='flex flex-wrap justify-between  mt-32 mb-20'>
+      <div className='flex flex-col lg:flex-row justify-between  mt-32 mb-20'>
         <div className='flex-1'>
           <h2
             className='text-5xl text-black leading-normal mb-10 text-center

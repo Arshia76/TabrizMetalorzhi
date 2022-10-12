@@ -1,17 +1,12 @@
 import { useContext } from 'react';
-import { EnqueryContext } from '../components/Layout';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiPhone } from 'react-icons/fi';
 import { GoLocation } from 'react-icons/go';
 import { FaFax } from 'react-icons/fa';
 
 const ContactForm = () => {
-  const context = useContext(EnqueryContext);
   return (
-    <div
-      ref={context.ref}
-      className='bg-[#FBFBFBd] my-10 pb-10 w-[90%] mx-auto px-4 md:px-20 shadow-md'
-    >
+    <div className='bg-[#FBFBFBd] my-10 pb-10 w-[90%] mx-auto px-4 md:px-20 shadow-md'>
       <div className='flex flex-col mb-10 '>
         <div className='flex items-start mt-10'>
           <GoLocation size={22} color='#000' />

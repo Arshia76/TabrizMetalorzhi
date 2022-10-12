@@ -9,7 +9,7 @@ import 'react-awesome-slider/dist/styles.css';
 import 'leaflet/dist/leaflet.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 import '../styles/Header.css';
-import Layout from '../components/Layout';
+import Layout from '../components/Common/Layout';
 
 function MyApp({ Component, pageProps }) {
   return (

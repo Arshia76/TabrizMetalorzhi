@@ -1,6 +1,6 @@
-import HeaderContent from '../components/HeaderContent';
-import HomeMiddle from '../components/HomeMiddle';
-import ProductCard from '../components/ProductCard';
+import HeaderContent from '../components/Page/Home/HeaderContent';
+import HomeMiddle from '../components/Page/Home/HomeMiddle';
+import ProductCard from '../components/Common/ProductCard';
 import Resource from '../public/Resource';
 import { useRouter } from 'next/router';
 

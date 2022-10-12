@@ -1,8 +1,4 @@
-import ContactForm from './ContactForm';
-import ContactUs from './ContactUs';
-import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
-import Resource from '../public/Resource';
+import Resource from '../../public/Resource';
 import { HiOutlineMail } from 'react-icons/hi';
 import { FiPhone } from 'react-icons/fi';
 import { GoLocation } from 'react-icons/go';
@@ -10,22 +6,9 @@ import { FaFax } from 'react-icons/fa';
 import { BsDot } from 'react-icons/bs';
 import Image from 'next/image';
 
-const DynamicMap = dynamic(() => import('../components/Map'), {
-  ssr: false,
-});
-
 const Footer = () => {
-  const router = useRouter();
-
   return (
     <footer className='w-full h-full'>
-      {/* <div className='px-8 md:px-40'>
-        {router.asPath === Resource.Routes.CONTACT && <ContactForm />}
-        <ContactUs />
-      </div> */}
-      {/* <div className='w-full mt-10'>
-        <DynamicMap />
-      </div> */}
       <div className='flex flex-col md:flex-row justify-around items-start px-16 py-20 bg-[#333]'>
         <div className='flex flex-col mb-10 md:mb-0 '>
           <h2

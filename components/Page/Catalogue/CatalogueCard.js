@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Resource from '../../public/Resource';
+import Resource from '../../../public/Resource';
 
 const CatalogueCard = () => {
   return (

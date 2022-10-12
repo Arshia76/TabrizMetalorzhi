@@ -1,5 +1,5 @@
 import ModalImage from 'react-modal-image';
-import Resource from '../../public/Resource';
+import Resource from '../../../public/Resource';
 import PropTypes from 'prop-types';
 
 const AboutContent = (props) => {

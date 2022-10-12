@@ -1,8 +1,7 @@
-import About from '../../components/About/About';
-import AboutContent from '../../components/About/AboutContent';
+import About from '../../components/Page/About/About';
+import AboutContent from '../../components/Page/About/AboutContent';
 import { useRouter } from 'next/router';
 import { aboutPart } from '../../data';
-import Resource from '../../public/Resource';
 
 const AboutPage = () => {
   const router = useRouter();

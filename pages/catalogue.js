@@ -1,5 +1,5 @@
-import Catalogue from '../components/Catalogue/Catalogue';
-import CatalogueCard from '../components/Catalogue/CatalogueCard';
+import Catalogue from '../components/Page/Catalogue/Catalogue';
+import CatalogueCard from '../components/Page/Catalogue/CatalogueCard';
 
 const CataloguePage = () => {
   return (

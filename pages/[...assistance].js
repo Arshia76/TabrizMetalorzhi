@@ -1,4 +1,4 @@
-import EmployForm from '../components/EmployForm';
+import EmployForm from '../components/Page/Assistence/EmployForm';
 
 const AssistancePage = () => {
   return (

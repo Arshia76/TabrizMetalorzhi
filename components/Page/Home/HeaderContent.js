@@ -45,7 +45,7 @@ const HeaderContent = () => {
     <div className='overflow-hidden relative'>
       <div
         className='relative w-screen '
-        style={{ height: 'calc(100vh - 300px)' }}
+        style={{ height: 'calc(100vh - 130px)' }}
       >
         {/* <video
           muted
