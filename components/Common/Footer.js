@@ -43,7 +43,7 @@ const Footer = () => {
           >
             گواهی‌نامه‌ها و نماد‌ها
           </h2>
-          <div className='flex items-start justify-center'>
+          <div className='flex items-center justify-center'>
             <Image
               src={Resource.Images.NACI}
               width={100}
@@ -52,9 +52,7 @@ const Footer = () => {
               objectFit='fill'
             />
             <Image
-              src={
-                'https://debearings.com/wp-content/uploads/2016/02/de_iso_9001.png'
-              }
+              src={Resource.Images.DQS}
               width={100}
               height={80}
               alt='naci'
@@ -65,9 +63,7 @@ const Footer = () => {
               height={80}
               alt='naci'
               objectFit='fill'
-              src={
-                'https://debearings.com/wp-content/uploads/2016/02/de_iso_14001.png'
-              }
+              src={Resource.Images.IQNET}
             />
           </div>
         </div>

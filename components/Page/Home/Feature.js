@@ -28,13 +28,19 @@ const Feature = (props) => {
       group-hover:items-start group-hover:transition-all group-hover:duration-1000 
       group-hover:ease-in'
       >
-        <Image
+        {/* <Image
           src={props.img}
           alt='feature'
           width={80}
           height={80}
           className='transition-all duration-1000 ease-in '
-        />
+        /> */}
+        <span
+          className='text-5xl text-white border border-solid border-white
+        p-8 rounded-lg font-bold'
+        >
+          {props.heading}
+        </span>
       </div>
     </div>
   );

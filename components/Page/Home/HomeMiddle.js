@@ -2,15 +2,22 @@ import Image from 'next/image';
 import Carousel from '../../Common/Carousel/Carousel';
 import Resource from '../../../public/Resource';
 import Feature from './Feature';
+import ProductCard from '../../Common/ProductCard';
 
 const HomeMiddle = () => {
   return (
-    <div className='px-8 md:px-40 mt-10 w-full'>
+    <div className='px-8 md:px- mt-10 w-full'>
       {/* firstPart */}
+      <h2
+        className='text-3xl md:text-6xl text-[#EFAF43] mt-40 mb-16 text-center font-semibold
+      border-4 border-solid border-[#333] w-fit p-12 rounded-xl mx-auto'
+      >
+        به وبسایت شرکت دانش بنیان متالورژی پودر تبریز خوش آمدید
+      </h2>
       <div className='flex flex-col lg:flex-row justify-between  mt-32 mb-20'>
         <div className='flex-1'>
           <h2
-            className='text-5xl text-black leading-normal mb-10 text-center
+            className='text-5xl text-[#EFAF43] leading-normal mb-10 text-center
           font-semibold'
           >
             تاریخچه متالورژی پودر
@@ -34,6 +41,7 @@ const HomeMiddle = () => {
             ایجاد نمود چراکه خلق آینده بسیار پر اهمیت می‌باشد.
           </p>
         </div>
+
         <div className='flex-1 relative lg:mr-20'>
           <Image
             src={Resource.Images.METALORIMG}
@@ -44,22 +52,55 @@ const HomeMiddle = () => {
           />
         </div>
       </div>
+      <h2 className='text-7xl text-[#EFAF43] mt-48 mb-16 text-center font-semibold'>
+        محصولات شرکت
+      </h2>
+      <div className='flex items-center justify-evenly flex-wrap my-10 mb-32 '>
+        <ProductCard
+          name='بوش'
+          img={Resource.Images.BG}
+          onClick={() => router.push(`${Resource.Routes.CATEGORY}/بوش`)}
+        />
+        <ProductCard
+          name='یاتاقان'
+          img={Resource.Images.YATAGANJ}
+          onClick={() => router.push(`${Resource.Routes.CATEGORY}/یاتاقان`)}
+        />
+        <ProductCard
+          name='صفحات اصطکاکی'
+          img={Resource.Images.WM}
+          onClick={() =>
+            router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی`)
+          }
+        />
+        <ProductCard
+          name='پودر فلزات'
+          img={Resource.Images.BRONZE}
+          onClick={() => router.push(`${Resource.Routes.CATEGORY}/پودر فلزات`)}
+        />
+      </div>
       {/* secondPart */}
+      <h2 className='text-7xl text-[#EFAF43] mt-48 mb-16 text-center font-extrabold'>
+        ارکان جهت‌ساز
+      </h2>
       <div
         className='flex flex-wrap
          items-center justify-evenly w-full'
       >
         <Feature
           content='بیش از 1000 تن قطعات متالورژی پودر در سال'
-          img='https://debearings.com/wp-content/uploads/2016/08/de_icon_kg.png'
+          // img='https://debearings.com/wp-content/uploads/2016/08/de_icon_kg.png'
+          heading='بیانیه چشم‌انداز'
         />
         <Feature
           content='بیش از 30 سال تجربه کاری در زمینه تولید قطعات به روش متالورژی پودر'
-          img='https://debearings.com/wp-content/uploads/2016/08/de_icon_check-1.png'
+          // img='https://debearings.com/wp-content/uploads/2016/08/de_icon_check-1.png'
+          heading='بیانیه ماموریت'
         />
         <Feature
           content='بیش از 1500 تن پودر فلزات رنگین در سال'
-          img='https://debearings.com/wp-content/uploads/2016/08/de_icon_feet.png'
+          // img='https://debearings.com/wp-content/uploads/2016/08/de_icon_feet.png'
+          heading='ارزش‌ها'
         />
       </div>
 

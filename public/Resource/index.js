@@ -23,9 +23,13 @@ import CAROUSEL5 from './Images/carousel/5.jpg';
 import CAROUSEL6 from './Images/carousel/6.jpeg';
 import CAROUSEL7 from './Images/carousel/7.jpg';
 import CAROUSEL8 from './Images/carousel/8.jpg';
-import NACI from './Images/footer/Naci.png';
+// import NACI from './Images/footer/Naci.png';
 import METALORIMG from './Images/metalorImg.jpg';
 import CATALOGUE from './Images/catalogue.jpg';
+
+import DQS from './Images/footer/dqs.svg';
+import IQNET from './Images/footer/iqnet.svg';
+import NACI from './Images/footer/naci.svg';
 
 class Resource {
   static Images = {
@@ -75,6 +79,8 @@ class Resource {
     NACI,
     METALORIMG,
     CATALOGUE,
+    DQS,
+    IQNET,
   };
 
   static Routes = {

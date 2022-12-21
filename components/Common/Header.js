@@ -608,18 +608,26 @@ const Header = () => {
                 marginTop: '25px',
               }}
             >
-              <div className='px-4 pt-4 flex flex-col items-start justify-between'>
+              <div className='pt-4 flex flex-col '>
                 <div
                   onClick={() => router.push(`${Resource.Routes.CATEGORY}/بوش`)}
                 >
-                  <MenuItem className='text-3xl mb-4 font-[500]'>بوش</MenuItem>
+                  <MenuItem
+                    className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                  >
+                    بوش
+                  </MenuItem>
                 </div>
                 <div
                   onClick={() =>
                     router.push(`${Resource.Routes.CATEGORY}/یاتاقان`)
                   }
                 >
-                  <MenuItem className='text-3xl mb-4 font-[500]'>
+                  <MenuItem
+                    className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                  >
                     یاتاقان
                   </MenuItem>
                 </div>
@@ -628,7 +636,10 @@ const Header = () => {
                     router.push(`${Resource.Routes.CATEGORY}/صفحه اصطکاکی`)
                   }
                 >
-                  <MenuItem className='text-3xl mb-4 font-[500]'>
+                  <MenuItem
+                    className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                  >
                     صفحات اصطکاکی
                   </MenuItem>
                 </div>
@@ -637,7 +648,10 @@ const Header = () => {
                     router.push(`${Resource.Routes.CATEGORY}/پودر فلزات`)
                   }
                 >
-                  <MenuItem className='text-3xl mb-4 font-[500]'>
+                  <MenuItem
+                    className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                  >
                     پودر فلزات
                   </MenuItem>
                 </div>
@@ -646,7 +660,10 @@ const Header = () => {
                     router.push(`${Resource.Routes.CATEGORY}/قطعات خودرو`)
                   }
                 >
-                  <MenuItem className='text-3xl mb-4 font-[500]'>
+                  <MenuItem
+                    className='text-2xl border-transparent border-solid border-r-4 
+              hover:border-r-4 hover:border-solid hover:border-r-[#EFAF43]'
+                  >
                     قطعات خودرو
                   </MenuItem>
                 </div>
